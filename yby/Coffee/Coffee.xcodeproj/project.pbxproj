@@ -18,9 +18,9 @@
 		188BEE2B2ABA9EE000509A90 /* CoffeeOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BEE2A2ABA9EE000509A90 /* CoffeeOrderViewController.swift */; };
 		188BEE2D2ABA9EE900509A90 /* CoffeeOrderViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188BEE2C2ABA9EE900509A90 /* CoffeeOrderViewController.storyboard */; };
 		188BEE2F2ABA9EFA00509A90 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BEE2E2ABA9EFA00509A90 /* MenuCell.swift */; };
-		188BEE312ABA9F0600509A90 /* MenuCell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188BEE302ABA9F0600509A90 /* MenuCell.storyboard */; };
 		188BEE332ABA9F1900509A90 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188BEE322ABA9F1900509A90 /* DetailViewController.swift */; };
 		188BEE352ABA9F2200509A90 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188BEE342ABA9F2200509A90 /* DetailViewController.storyboard */; };
+		188BEE3A2ABBC43D00509A90 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188BEE392ABBC43D00509A90 /* MenuCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +37,9 @@
 		188BEE2A2ABA9EE000509A90 /* CoffeeOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOrderViewController.swift; sourceTree = "<group>"; };
 		188BEE2C2ABA9EE900509A90 /* CoffeeOrderViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoffeeOrderViewController.storyboard; sourceTree = "<group>"; };
 		188BEE2E2ABA9EFA00509A90 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
-		188BEE302ABA9F0600509A90 /* MenuCell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuCell.storyboard; sourceTree = "<group>"; };
 		188BEE322ABA9F1900509A90 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		188BEE342ABA9F2200509A90 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		188BEE392ABBC43D00509A90 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				188BEE2E2ABA9EFA00509A90 /* MenuCell.swift */,
-				188BEE302ABA9F0600509A90 /* MenuCell.storyboard */,
+				188BEE392ABBC43D00509A90 /* MenuCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -213,8 +213,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188BEE3A2ABBC43D00509A90 /* MenuCell.xib in Resources */,
 				188BEE1A2ABA948000509A90 /* LaunchScreen.storyboard in Resources */,
-				188BEE312ABA9F0600509A90 /* MenuCell.storyboard in Resources */,
 				188BEE172ABA948000509A90 /* Assets.xcassets in Resources */,
 				188BEE2D2ABA9EE900509A90 /* CoffeeOrderViewController.storyboard in Resources */,
 				188BEE352ABA9F2200509A90 /* DetailViewController.storyboard in Resources */,

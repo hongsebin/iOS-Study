@@ -22,7 +22,11 @@ class ViewController: UIViewController {
         let story = UIStoryboard(name: "CoffeeOrderViewController", bundle: nil)
         
         // 위 스토리보드와 연결된 vc 저장
-        let vc = story.instantiateViewController(withIdentifier: "CoffeeOrderViewController")
+        guard let vc = story.instantiateViewController(withIdentifier: "CoffeeOrderViewController") as? CoffeeOrderViewController,
+        
+                let navi = self.navigationController else { return }
+        
+        navi.pushViewController(vc, animated: true)
     }
     
     @IBAction func imageSearchBtnTap(_ sender: Any) {
