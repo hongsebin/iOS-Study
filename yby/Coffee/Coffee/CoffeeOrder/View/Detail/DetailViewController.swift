@@ -10,6 +10,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    
+    
+    // viewModel 변수에 DetailViewModel 클래스 할당.
+    // nil값을 가질 수 있음
+    var viewModel: DetailViewModel?
+    
+    
+    
     // 선택한 음료 이름,사진
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -48,6 +56,13 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         cupSizeButtonStyle()
         
+        
+        
+        // viewModel의 delegate를 DetailViewController에서 실행
+        viewModel?.delegate = self
+        
+        
+        
         // 선택한 메뉴 정보
         if let menu = selectedMenu {
             imageView.image = UIImage(named: menu.imageName)
@@ -71,20 +86,32 @@ class DetailViewController: UIViewController {
     
     // cup size button select action ( 색상 변경 )
     @IBAction func actionSmallButton(_ sender: Any) {
-        smallButton.layer.backgroundColor = UIColor.systemGreen.cgColor
-        mediumButton.layer.backgroundColor = UIColor.white.cgColor
-        largeButton.layer.backgroundColor = UIColor.white.cgColor
+        smallButton.backgroundColor = .systemGreen
+        mediumButton.backgroundColor = .white
+        largeButton.backgroundColor = .white
+        
+        viewModel?.didTapSizeButton(size: .small)
     }
     @IBAction func actionMediumButton(_ sender: Any) {
-        smallButton.layer.backgroundColor = UIColor.white.cgColor
-        mediumButton.layer.backgroundColor = UIColor.systemGreen.cgColor
-        largeButton.layer.backgroundColor = UIColor.white.cgColor
+        smallButton.backgroundColor = .white
+        mediumButton.backgroundColor = .systemGreen
+        largeButton.backgroundColor = .white
+        
+        viewModel?.didTapSizeButton(size: .medium)
     }
     @IBAction func actionLargeButton(_ sender: Any) {
-        smallButton.layer.backgroundColor = UIColor.white.cgColor
-        mediumButton.layer.backgroundColor = UIColor.white.cgColor
-        largeButton.layer.backgroundColor = UIColor.systemGreen.cgColor
+        smallButton.backgroundColor = .white
+        mediumButton.backgroundColor = .white
+        largeButton.backgroundColor = .systemGreen
+        
+        viewModel?.didTapSizeButton(size: .large)
     }
-    
-    
+}
+
+
+
+extension DetailViewController: DetailOutput {
+    func didchangeSize(size: Size) {
+        print("delegate \(size)")
+    }
 }
