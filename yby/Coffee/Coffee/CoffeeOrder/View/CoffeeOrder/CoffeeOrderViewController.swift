@@ -74,11 +74,43 @@ extension CoffeeOrderViewController: UICollectionViewDataSource, UICollectionVie
         // 선택한 셀 메뉴 정보 가져오기
         let selectedMenu = viewModel.menuList[indexPath.item]
         
+        
+        
+        // 1. Storyboard를 이용한 화면전환 -----------------------------------
+        // CoffeeOrderViewController의 스토리보드를 직접 로드하고,
+        // 해당 스토리보드에서 CoffeOrderViewController 인스턴스를 생성한다.
+        // 스토리보드에서 인스턴스를 로드하고 초기화해야할때 사용
+        
+        // DetailViewController 스토리보드 찾아서 story 상수에 저장
+        let story = UIStoryboard(name: "DetailViewController", bundle: nil)
+        
+        guard let vc = story.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController,
+        let navi = self.navigationController else { return }
+        
+        // 선택한 메뉴 정보를 DetailViewController의 selectedMenu에 할당
+        vc.selectedMenu = selectedMenu
+        
+        navi.pushViewController(vc, animated: true)
+        
+        
+        
+        
+        // 2. 코드로 직접 뷰컨트롤러를 생성해 화면전환 -----------------------------
+        // 만들어둔 스토리보드를 로드하지 않고, 코드로 DetailViewController 인스턴스를
+        // 생성하고 초기화한다. 이후에 selectedMenu 값을 설정하고
+        // pushViewController을 사용해 뷰컨트롤러를 표시한다.
+        // 스토리보드에서 뷰컨을 초기화하지 않고, 코드로 직접 생성하고 설정할 수 있음
+        
+        /*
         // DetailViewController 인스턴스 생성
         if let detailVC = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            
+            // DetailViewController에 메뉴 정보 전달
             detailVC.selectedMenu = selectedMenu
             
+            // DetailViewController을 표시
             navigationController?.pushViewController(detailVC, animated: true)
         }
+        */
     }
 }
