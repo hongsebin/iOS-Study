@@ -26,20 +26,24 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var tempSegment: UISegmentedControl!
     
     // cup size
-    @IBOutlet weak var smallButton: UIButton!
-    @IBOutlet weak var mediumButton: UIButton!
-    @IBOutlet weak var largeButton: UIButton!
-    // button style
-    func cupSizeButtonStyle() {
-        smallButton.layer.borderColor = UIColor.systemGray5.cgColor
-        smallButton.layer.borderWidth = 2
-        smallButton.layer.cornerRadius = 8
-        mediumButton.layer.borderColor = UIColor.systemGray5.cgColor
-        mediumButton.layer.borderWidth = 2
-        mediumButton.layer.cornerRadius = 8
-        largeButton.layer.borderColor = UIColor.systemGray5.cgColor
-        largeButton.layer.borderWidth = 2
-        largeButton.layer.cornerRadius = 8
+    @IBOutlet weak var smallView: UIView!
+    @IBOutlet weak var mediumView: UIView!
+    @IBOutlet weak var largeView: UIView!
+    
+    // cup size Uiview radius 설정
+    func viewRadius() {
+        smallView.layer.cornerRadius = 8
+        mediumView.layer.cornerRadius = 8
+        largeView.layer.cornerRadius = 8
+        
+        smallView.layer.borderWidth = 2
+        smallView.layer.borderColor = UIColor.systemGray5.cgColor
+        
+        mediumView.layer.borderWidth = 2
+        mediumView.layer.borderColor = UIColor.systemGray5.cgColor
+        
+        largeView.layer.borderWidth = 2
+        largeView.layer.borderColor = UIColor.systemGray5.cgColor
     }
     
     // 컵 선택
@@ -48,13 +52,18 @@ class DetailViewController: UIViewController {
     // 할인
     @IBOutlet weak var discountView: UIView!
     
+    // 선택 완료
+    @IBAction func orderButton(_ sender: Any) {
+    }
     
     
+    // 수정
     var selectedMenu: Menu?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cupSizeButtonStyle()
+        viewRadius()
+//        addTarget()
         
         
         

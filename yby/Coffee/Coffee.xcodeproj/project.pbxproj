@@ -22,6 +22,7 @@
 		188BEE352ABA9F2200509A90 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188BEE342ABA9F2200509A90 /* DetailViewController.storyboard */; };
 		188BEE3A2ABBC43D00509A90 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188BEE392ABBC43D00509A90 /* MenuCell.xib */; };
 		188D49C22AC26C1E00560611 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D49C12AC26C1E00560611 /* DetailViewModel.swift */; };
+		188D49D42AD6BED600560611 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D49D32AD6BED600560611 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		188BEE342ABA9F2200509A90 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		188BEE392ABBC43D00509A90 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		188D49C12AC26C1E00560611 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		188D49D32AD6BED600560611 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				188BEE262ABA9EB500509A90 /* Menu.swift */,
+				188D49D32AD6BED600560611 /* DetailViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				188BEE2F2ABA9EFA00509A90 /* MenuCell.swift in Sources */,
 				188BEE122ABA947F00509A90 /* ViewController.swift in Sources */,
 				188BEE0E2ABA947F00509A90 /* AppDelegate.swift in Sources */,
+				188D49D42AD6BED600560611 /* DetailViewModel.swift in Sources */,
 				188BEE292ABA9ECA00509A90 /* CoffeeOrderViewModel.swift in Sources */,
 				188D49C22AC26C1E00560611 /* DetailViewModel.swift in Sources */,
 				188BEE2B2ABA9EE000509A90 /* CoffeeOrderViewController.swift in Sources */,

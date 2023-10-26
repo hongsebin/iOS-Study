@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TodoListCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoListCell" rowHeight="69" id="uo0-mT-rOD" customClass="TodoListCell" customModule="ToDoLIstSampleProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uo0-mT-rOD" id="jCi-tl-PfI">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvX-lF-rIl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="69"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UqP-wl-Pb8">
+                                <rect key="frame" x="16" y="0.0" width="361" height="53"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOS-aT-8Db">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9g-2n-4yU">
+                                                <rect key="frame" x="-2.3333333333333357" y="6.6666666666666679" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="1by-yq-bjZ"/>
+                                                    <constraint firstAttribute="height" constant="40" id="rJB-tB-HQI"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="circle" catalog="system">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Button">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="18"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <state key="selected" image="circle.inset.filled" catalog="system"/>
+                                                <connections>
+                                                    <action selector="didTapCheckBtn:" destination="uo0-mT-rOD" eventType="touchUpInside" id="QP6-1D-pLB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="8Wn-hh-Whp"/>
+                                            <constraint firstItem="V9g-2n-4yU" firstAttribute="centerX" secondItem="oOS-aT-8Db" secondAttribute="centerX" id="gNt-Ab-jok"/>
+                                            <constraint firstItem="V9g-2n-4yU" firstAttribute="centerY" secondItem="oOS-aT-8Db" secondAttribute="centerY" id="xP2-iV-Mqe"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-0q-sna">
+                                        <rect key="frame" x="45" y="0.0" width="316" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hAK-0q-sna" firstAttribute="top" secondItem="UqP-wl-Pb8" secondAttribute="top" id="Et9-gR-hra"/>
+                                    <constraint firstAttribute="bottom" secondItem="hAK-0q-sna" secondAttribute="bottom" id="zZv-5G-LyJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="hAK-0q-sna" secondAttribute="trailing" id="zhA-qa-h3e"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UqP-wl-Pb8" firstAttribute="top" secondItem="PvX-lF-rIl" secondAttribute="top" id="7Q7-2y-U0u"/>
+                            <constraint firstAttribute="trailing" secondItem="UqP-wl-Pb8" secondAttribute="trailing" constant="16" id="Vwe-6b-fBz"/>
+                            <constraint firstItem="UqP-wl-Pb8" firstAttribute="leading" secondItem="PvX-lF-rIl" secondAttribute="leading" constant="16" id="hLd-xJ-bXV"/>
+                            <constraint firstAttribute="bottom" secondItem="UqP-wl-Pb8" secondAttribute="bottom" constant="16" id="sph-dP-ua8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="PvX-lF-rIl" secondAttribute="bottom" id="cAU-gl-dYb"/>
+                    <constraint firstItem="PvX-lF-rIl" firstAttribute="leading" secondItem="jCi-tl-PfI" secondAttribute="leading" id="f7y-IM-pwW"/>
+                    <constraint firstItem="PvX-lF-rIl" firstAttribute="top" secondItem="jCi-tl-PfI" secondAttribute="top" id="fdS-xV-DUH"/>
+                    <constraint firstAttribute="trailing" secondItem="PvX-lF-rIl" secondAttribute="trailing" id="oDZ-1g-0B6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkBtn" destination="V9g-2n-4yU" id="5Kn-rW-WqC"/>
+                <outlet property="label" destination="hAK-0q-sna" id="Ry2-cL-bVZ"/>
+            </connections>
+            <point key="canvasLocation" x="168.70229007633588" y="68.661971830985919"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
