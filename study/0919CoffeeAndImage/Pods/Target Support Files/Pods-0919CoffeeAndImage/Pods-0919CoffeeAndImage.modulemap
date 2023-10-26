@@ -1,0 +1,6 @@
+framework module Pods_0919CoffeeAndImage {
+  umbrella header "Pods-0919CoffeeAndImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

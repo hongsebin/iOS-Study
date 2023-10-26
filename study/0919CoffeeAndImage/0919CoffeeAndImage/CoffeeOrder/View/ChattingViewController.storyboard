@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chatting View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ChattingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ChattingViewController" customModule="_919CoffeeAndImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="px8-gf-fQt">
+                                <rect key="frame" x="0.0" y="59" width="393" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1XS-bI-KqP">
+                                <rect key="frame" x="0.0" y="59" width="393" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pSv-xY-x7o">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qAH-gL-962">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SUh-8V-r1W">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEE-jd-scO">
+                                <rect key="frame" x="0.0" y="778" width="393" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vf8-Wt-Bkz">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QH-wH-mlj">
+                                        <rect key="frame" x="303" y="0.0" width="90" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="E6d-hx-sxY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="전송"/>
+                                        <connections>
+                                            <action selector="sendChat:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2iv-DH-SUD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstItem="vf8-Wt-Bkz" firstAttribute="top" secondItem="BEE-jd-scO" secondAttribute="top" id="FNx-gM-e7o"/>
+                                    <constraint firstItem="vf8-Wt-Bkz" firstAttribute="leading" secondItem="BEE-jd-scO" secondAttribute="leading" id="REs-5z-f5S"/>
+                                    <constraint firstItem="1QH-wH-mlj" firstAttribute="leading" secondItem="vf8-Wt-Bkz" secondAttribute="trailing" id="SJg-lb-JWX"/>
+                                    <constraint firstAttribute="bottom" secondItem="vf8-Wt-Bkz" secondAttribute="bottom" id="VJ4-QR-5nX"/>
+                                    <constraint firstAttribute="trailing" secondItem="1QH-wH-mlj" secondAttribute="trailing" id="g9D-lM-3ml"/>
+                                    <constraint firstItem="1QH-wH-mlj" firstAttribute="top" secondItem="BEE-jd-scO" secondAttribute="top" id="orp-Vc-hCr"/>
+                                    <constraint firstAttribute="bottom" secondItem="1QH-wH-mlj" secondAttribute="bottom" id="v97-6v-78k"/>
+                                    <constraint firstAttribute="height" constant="40" id="vfD-nK-FTD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BEE-jd-scO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5Mi-jw-bhc"/>
+                            <constraint firstItem="BEE-jd-scO" firstAttribute="top" secondItem="1XS-bI-KqP" secondAttribute="bottom" id="6o1-4f-BaL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="px8-gf-fQt" secondAttribute="trailing" id="Ih3-6u-G5e"/>
+                            <constraint firstItem="1XS-bI-KqP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="IqH-ZP-UNt"/>
+                            <constraint firstItem="px8-gf-fQt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Jz8-BT-YVn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BEE-jd-scO" secondAttribute="bottom" id="Qam-Iy-26L"/>
+                            <constraint firstItem="1XS-bI-KqP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Xyz-YZ-2kV"/>
+                            <constraint firstItem="px8-gf-fQt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="njn-dy-YBu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BEE-jd-scO" secondAttribute="trailing" id="rkb-yY-dXN"/>
+                            <constraint firstItem="1XS-bI-KqP" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="rwK-9W-lUQ"/>
+                            <constraint firstItem="BEE-jd-scO" firstAttribute="top" secondItem="px8-gf-fQt" secondAttribute="bottom" id="zbP-yg-W8F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="1XS-bI-KqP" id="T5w-lo-VZV"/>
+                        <outlet property="sendBtn" destination="1QH-wH-mlj" id="zsy-aG-hIE"/>
+                        <outlet property="tableView" destination="px8-gf-fQt" id="6Ff-j3-L4w"/>
+                        <outlet property="textField" destination="vf8-Wt-Bkz" id="K0V-aB-zUz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.946564885496173" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

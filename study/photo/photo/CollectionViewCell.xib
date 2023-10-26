@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" id="agK-8G-UCQ" customClass="CollectionViewCell" customModule="photo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bvk-Vb-mSx">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVY-cn-lE8">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfv-Wi-DxL">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bKV-ja-Ip2"/>
+                                    <constraint firstAttribute="width" constant="100" id="bks-0X-LRV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nfv-Wi-DxL" firstAttribute="leading" secondItem="uVY-cn-lE8" secondAttribute="leading" id="9eT-uQ-CC7"/>
+                            <constraint firstItem="nfv-Wi-DxL" firstAttribute="top" secondItem="uVY-cn-lE8" secondAttribute="top" id="Htz-Fz-mBN"/>
+                            <constraint firstAttribute="bottom" secondItem="nfv-Wi-DxL" secondAttribute="bottom" id="IJM-1Y-nLh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="uVY-cn-lE8" secondAttribute="bottom" id="77h-5a-YFW"/>
+                    <constraint firstItem="uVY-cn-lE8" firstAttribute="top" secondItem="Bvk-Vb-mSx" secondAttribute="top" id="K0j-qG-9ft"/>
+                    <constraint firstItem="uVY-cn-lE8" firstAttribute="leading" secondItem="Bvk-Vb-mSx" secondAttribute="leading" id="S4b-9o-o2O"/>
+                    <constraint firstAttribute="trailing" secondItem="uVY-cn-lE8" secondAttribute="trailing" id="hKw-Ux-wF7"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="199" height="101"/>
+            <connections>
+                <outlet property="imgView" destination="nfv-Wi-DxL" id="cDG-tS-cfp"/>
+            </connections>
+            <point key="canvasLocation" x="-309.92366412213738" y="-158.09859154929578"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

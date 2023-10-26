@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_903ImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imL-vT-ou2">
+                                <rect key="frame" x="76.666666666666686" y="79" width="240" height="300"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvZ-0M-31b">
+                                <rect key="frame" x="50" y="679" width="54" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="G5r-yt-UyL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확대"/>
+                                <connections>
+                                    <action selector="btnResizeImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kIH-ZD-TH3"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ME-ws-9cp">
+                                <rect key="frame" x="304" y="679" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="gcN-Ll-UF2"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="switchImageOnOff:" destination="BYZ-38-t0r" eventType="valueChanged" id="Anp-go-NPG"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7ME-ws-9cp" firstAttribute="leading" secondItem="TvZ-0M-31b" secondAttribute="trailing" constant="200" id="38a-qS-I2L"/>
+                            <constraint firstItem="imL-vT-ou2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="4FN-uG-ojd"/>
+                            <constraint firstItem="TvZ-0M-31b" firstAttribute="top" secondItem="imL-vT-ou2" secondAttribute="bottom" constant="300" id="CCP-KN-fFd"/>
+                            <constraint firstItem="TvZ-0M-31b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Jzm-6N-BZ7"/>
+                            <constraint firstItem="TvZ-0M-31b" firstAttribute="top" secondItem="imL-vT-ou2" secondAttribute="bottom" constant="300" id="XLU-Ga-Xwu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="imL-vT-ou2" secondAttribute="trailing" constant="76.329999999999998" id="bgI-Jq-4AM"/>
+                            <constraint firstItem="imL-vT-ou2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76.670000000000002" id="nUi-2y-mnU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TvZ-0M-31b" secondAttribute="bottom" constant="104" id="vU1-a1-b9Q"/>
+                            <constraint firstItem="7ME-ws-9cp" firstAttribute="top" secondItem="imL-vT-ou2" secondAttribute="bottom" constant="300" id="xMt-aD-7Th"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnResize" destination="TvZ-0M-31b" id="xO0-ux-9xB"/>
+                        <outlet property="imgView" destination="imL-vT-ou2" id="CzO-La-RfO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
